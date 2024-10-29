@@ -1,0 +1,115 @@
+.stocklist {
+	min-width: 450px;
+}
+
+.stockliststackmain {
+	display: flex;
+	flex-direction: column;
+	overflow-y: scroll;
+	max-height: 50vh;
+	color: var(--text-colour);
+	font-weight: bold;
+}
+
+.stockliststack {
+	background-color: var(--stockliststack-bg);
+	list-style: none;
+	padding: 0.5em 1em;
+	margin: 0.5em;
+	border-radius: 20px;
+	box-shadow: 0 4px 8px var(--input-button-box-shadow-color);
+}
+
+.stockliststack li {
+	padding: 0.5em;
+	margin: 0.5em;
+	box-sizing: border-box;
+	border-radius: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.stockliststackcontainer {
+	width: 100%;
+}
+
+.stockliststackptag {
+	text-align: center;
+}
+
+.stockliststacklinechart {
+	width: 100%;
+}
+
+.stocklist h2 {
+	color: var(--text-colour);
+	margin: 0.5em 0;
+}
+
+.nostocklist {
+	color: var(--text-colour);
+	margin: 1em;
+	font-weight: bold;
+}
+
+.profit {
+	color: green;
+}
+
+.loss {
+	color: red;
+}
+
+.searchbarcontainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1em;
+}
+
+.stocklistsearchbar {
+	padding: 10px;
+	margin: 0.5em 1.5em;
+	border-radius: 20px;
+}
+
+input.stocklistsearchbar {
+	text-align: center;
+}
+
+/* screen larger then medium */
+@media (min-width: 768px) {
+	.inputcontainer {
+		border-radius: 20px;
+	}
+
+	.stockliststackmain {
+		width: 100%;
+		max-height: 45vh;
+		overflow-y: auto;
+	}
+
+	.stockliststack {
+		margin: 1em;
+	}
+
+	.stockliststackcontainer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	.stockliststackptag {
+		flex: 1;
+		text-align: left;
+		padding-right: 3em;
+		padding-left: 3em;
+	}
+
+	.stockliststacklinechart {
+		flex: 2;
+		width: auto;
+	}
+}

@@ -1,0 +1,159 @@
+:root {
+	/* body + stockform color var */
+	--whitecolor: rgba(255, 255, 255, 0.87);
+	--input-bg-colour: #1c1c1c;
+	--button-bg-colour: #1c1c1c;
+	--text-colour: blanchedalmond;
+	--input-text-colour: blanchedalmond;
+	--input-button-hover-colour: blanchedalmond;
+	--button-text-colour: blanchedalmond;
+	--bg-colour: rgba(50, 48, 45, 0.992);
+	--bgi-gradient-colour: rgba(255, 235, 205, 0.03);
+	--svg-fill-color: blanchedalmond;
+	--input-button-box-shadow-color: rgba(0, 0, 0, 0.4);
+
+	/* stocklist color var */
+	--stockliststack-bg: #1c1c1c;
+
+	/* backtotop color var */
+	--backtotop-bg: #1c1c1c;
+	--backtotop-box-shadow: rgba(255, 235, 205, 0.5);
+
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	color: var(--whitecolor);
+
+	height: 100vh;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	/* grid line */
+	background-color: var(--bg-colour);
+	background-image: linear-gradient(
+			to right,
+			var(--bgi-gradient-colour) 1px,
+			transparent 1px
+		),
+		linear-gradient(
+			to bottom,
+			var(--bgi-gradient-colour) 1px,
+			transparent 1px
+		);
+	background-size: 40px 40px;
+}
+
+/* var for light theme */
+[data-theme='light'] {
+	/* body + stockform color var */
+	--input-bg-colour: white;
+	--button-bg-colour: #8ecae6;
+	--text-colour: #333333;
+	--input-text-colour: #333333;
+	--input-button-hover-colour: rgb(167, 167, 167);
+	--button-text-colour: white;
+	--bg-colour: #f5f5f5;
+	--bgi-gradient-colour: rgba(0, 0, 0, 0.02);
+	--svg-fill-color: #333333;
+	--input-button-box-shadow-color: rgba(0, 0, 0, 0.15);
+
+	/* stocklist color var */
+	--stockliststack-bg: white;
+
+	/* backtotop color var */
+	--backtotop-bg: rgb(164, 164, 164);
+	--backtotop-box-shadow: rgba(142, 202, 230, 0.473);
+
+	background-color: var(--bg-colour);
+	background-image: linear-gradient(
+			to right,
+			var(--bgi-gradient-colour) 1px,
+			transparent 1px
+		),
+		linear-gradient(
+			to bottom,
+			var(--bgi-gradient-colour) 1px,
+			transparent 1px
+		);
+}
+
+.themecontainer svg {
+	fill: var(--svg-fill-color);
+}
+
+body {
+	margin: 1em;
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	min-width: 320px;
+	min-height: auto;
+	overflow: hidden;
+}
+
+h1 {
+	font-size: 2.7em;
+	line-height: 1.1;
+	color: var(--text-colour);
+}
+
+button {
+	border-radius: 15px;
+	border: 3px solid transparent;
+	padding: 0.6em 1.2em;
+	font-size: 1em;
+	font-weight: 500;
+	font-family: inherit;
+	background-color: var(--button-bg-colour);
+	cursor: pointer;
+	color: var(--button-text-colour);
+	box-shadow: 0 4px 8px var(--input-button-box-shadow-color);
+}
+
+input {
+	border-radius: 15px;
+	border: 3px solid transparent;
+	padding: 0.6em 1.2em;
+	font-size: 1em;
+	font-weight: 500;
+	font-family: inherit;
+	background-color: var(--input-bg-colour);
+	cursor: pointer;
+	color: var(--input-text-colour);
+	box-shadow: 0 4px 8px var(--input-button-box-shadow-color);
+}
+
+input:hover {
+	border-color: var(--input-button-hover-colour);
+}
+
+button:hover {
+	border-color: var(--input-button-hover-colour);
+}
+input:focus {
+	outline: none;
+}
+input:focus-visible {
+	outline: none;
+}
+
+button:focus,
+button:focus-visible {
+	outline: none;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

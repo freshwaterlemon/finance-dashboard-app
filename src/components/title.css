@@ -1,0 +1,45 @@
+.titlecontainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 20px;
+	height: 90px;
+	position: relative;
+	min-width: 450px;
+	cursor: pointer;
+}
+
+/* h1 */
+.titlecontainer h1 {
+	margin: 0 auto;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+/* icons container */
+.themecontainer {
+	display: flex;
+	margin-left: auto;
+	align-items: center;
+}
+
+/* icon styling */
+.themelight,
+.themedark {
+	margin-left: 10px;
+}
+
+/* screen smaller then medium */
+@media (max-width: 768px) {
+	.titlecontainer {
+		height: 100px;
+		margin-bottom: 1em;
+		padding: 0;
+		cursor: pointer;
+	}
+
+	.themecontainer {
+		padding-right: 2em;
+	}
+}
